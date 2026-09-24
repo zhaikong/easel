@@ -21,12 +21,12 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc && chmod +x dist/cli.js",
-    "dev": "tsc --watch",
+    "build": "node init && tsc && chmod +x dist/cli.js",
+    "dev": "node init && tsc --watch",
     "prepublishOnly": "npm run build",
     "postinstall": "node scripts/postinstall.js",
     "preuninstall": "node scripts/preuninstall.js",
-    "start": "node dist/cli.js"
+    "start": "node init && node dist/cli.js"
   },
   "engines": {
     "node": ">=22"
